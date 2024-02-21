@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Whether to show cloned apps preferences. -->
+    <bool name="config_cloned_apps_page_enabled">true</bool>
+</resources>
