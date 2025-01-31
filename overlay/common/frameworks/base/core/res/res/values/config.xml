@@ -315,6 +315,9 @@
 
     <!-- The list of components which should be automatically disabled for all devices. -->
     <string-array name="config_globallyDisabledComponents" translatable="false">
+        <!-- Battery Widget -->
+        <item>com.google.android.settings.intelligence/com.google.android.settings.intelligence.modules.batterywidget.impl.BatteryAppWidgetProvider</item>
+        <item>com.google.android.settings.intelligence/com.google.android.settings.intelligence.modules.batterywidget.impl.BatteryWidgetPromoActivity</item>
         <!-- Chimera -->
         <item>com.google.android.gms/com.google.android.gms.chimera.GmsIntentOperationService$GmsExternalReceiver</item>
         <!-- Dialer -->
