@@ -393,5 +393,8 @@
         <item>device_personalization_services/WallpaperEffects__use_gpu=true</item>
         <item>device_personalization_services/WallpaperEffects__use_tpu=false</item>
     </string-array>
+
+   <!-- AOD wallpaper -->
+    <bool name="config_dozeSupportsAodWallpaper">true</bool>
 </resources>
 
