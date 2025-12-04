@@ -333,6 +333,7 @@
         <item>com.google.android.gms/com.google.android.gms.update.SystemUpdateService.SecretCodeReceiver</item>
         <item>com.google.android.gms/com.google.android.gms.update.SystemUpdateService</item>
         <item>com.google.android.gms/com.google.android.gms.update.SystemUpdateV2Activity</item>
+        <item>com.google.android.gms/com.google.android.gms.update.control.NotificationControl</item>
         <item>com.google.android.gms/com.google.android.gms.update.phone.PopupDialog</item>
         <item>com.google.android.setupwizard/com.google.android.setupwizard.update.OtaUpdateActivity</item>
         <!-- Google Play System Update -->
