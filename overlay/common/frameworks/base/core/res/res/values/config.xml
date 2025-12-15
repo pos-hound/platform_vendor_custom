@@ -396,5 +396,7 @@
 
    <!-- AOD wallpaper -->
     <bool name="config_dozeSupportsAodWallpaper">true</bool>
-</resources>
 
+    <!-- Whether the reduce bright colors feature is available. -->
+    <bool name="config_reduceBrightColorsAvailable">true</bool>
+</resources>
