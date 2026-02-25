@@ -5,6 +5,9 @@ CUSTOM_PLATFORM_VERSION := 16.2
 CUSTOM_VERSION := $(CUSTOM_BUILD)-$(CUSTOM_PLATFORM_VERSION)-$(CUSTOM_BUILD_DATE)
 CUSTOM_VERSION_PROP := sixteen
 
+# Additional Flags
+PERF_ANIM_OVERRIDE ?= false
+
 # PixelOS Platform Version
 PRODUCT_PRODUCT_PROPERTIES += \
     ro.custom.build.date=$(CUSTOM_BUILD_DATE) \
@@ -15,3 +18,7 @@ PRODUCT_PRODUCT_PROPERTIES += \
 PRODUCT_PRODUCT_PROPERTIES += \
     net.pixelos.build_type=ci \
     net.pixelos.version=$(CUSTOM_VERSION_PROP)
+
+# Anim Override
+PRODUCT_PRODUCT_PROPERTIES += \
+    persist.sys.activity_anim_perf_override=$(PERF_ANIM_OVERRIDE)
