@@ -28,55 +28,11 @@
         <!-- Don't pin camera app to save memory -->
         <item>runtime_native_boot/pin_camera=false</item>
 
-        <!-- Enable new location indicators -->
-        <item>privacy/location_access_check_enabled=true</item>
-        <item>privacy/location_accuracy_enabled=true</item>
-        <item>privacy/location_indicator_settings_enabled=true</item>
-        <item>privacy/location_indicators_enabled=true</item>
-        <item>privacy/location_indicators_show_system=false</item>
-        <item>privacy/location_indicators_small_enabled=true</item>
-
-        <!-- Enable safety center -->
-        <item>privacy/safety_center_is_enabled=true</item>
-
         <!-- Enable shared connectivity -->
         <item>wifi/shared_connectivity_enabled=true</item>
 
         <!-- Enable smart actions in the clipboard overlay -->
         <item>systemui/clipboard_overlay_show_actions=true</item>
-
-        <!-- Globally enable the new photo picker -->
-        <item>storage_native_boot/take_over_get_content=true</item>
-
-        <!--
-            Keep track of more app ops for privacy dashboard display.
-            From AppOpsManager.RUNTIME_AND_APPOP_PERMISSIONS_OPS:
-            Location: COARSE_LOCATION, FINE_LOCATION
-            Camera: CAMERA
-            Microphone: RECORD_AUDIO
-            Calendar: READ_CALENDAR, WRITE_CALENDAR
-            Call logs: READ_CALL_LOG, WRITE_CALL_LOG
-            Contacts: READ_CONTACTS, WRITE_CONTACTS, GET_ACCOUNTS
-            Files and media: READ_EXTERNAL_STORAGE, WRITE_EXTERNAL_STORAGE, ACCESS_MEDIA_LOCATION
-            Nearby devices: BLUETOOTH_SCAN, BLUETOOTH_CONNECT, BLUETOOTH_ADVERTISE, UWB_RANGING
-            Phone: READ_PHONE_STATE, READ_PHONE_NUMBERS, CALL_PHONE, READ_CALL_LOG, WRITE_CALL_LOG, ADD_VOICEMAIL, USE_SIP, PROCESS_OUTGOING_CALLS, ANSWER_PHONE_CALLS, ACCEPT_HANDOVER
-            Body sensors: ACTIVITY_RECOGNITION
-            SMS: SEND_SMS, RECEIVE_SMS, READ_SMS, RECEIVE_WAP_PUSH, RECEIVE_MMS, READ_CELL_BROADCASTS
-            From PrivacyItemController:
-            Camera: PHONE_CALL_CAMERA
-            Microphone: PHONE_CALL_MICROPHONE
-        -->
-        <item>privacy/discrete_history_ops_cslist=0,109,1,108,26,101,27,102,106,100,8,9,6,7,4,5,62,59,60,90,77,111,114,112,51,65,13,6,7,52,53,54,69,74,79,113,20,16,14,19,18,57</item>
-
-        <!-- Keep up to 7 days of permission usage history -->
-        <item>privacy/discrete_history_cutoff_millis=604800000</item>
-        <item>privacy/privacy_dashboard_7_day_toggle=true</item>
-
-        <!-- Privacy -->
-        <item>privacy/permissions_hub_2_enabled=true</item>
-        <item>privacy/permissions_hub_enabled=true</item>
-        <item>privacy/safety_protection_enabled=true</item>
-        <item>privacy/warning_banner_enabled=true</item>
 
         <!--
             Device Personalization Services (AiAi)
@@ -225,7 +181,6 @@
         <item>device_personalization_services/NowPlaying__youtube_export_enabled=true</item>
 
         <!-- Media Provider -->
-        <item>mediaprovider/cloud_media_feature_enabled=true</item>
         <item>mediaprovider/allowed_cloud_providers=com.google.android.apps.photos.cloudpicker</item>
 
         <!-- Pixel Launcher -->
@@ -371,7 +326,6 @@
         <item>systemui/enable_screenshot_scrolling=true</item>
         <item>systemui/quick_access_wallet_enabled=true</item>
         <item>systemui/tap_to_edit=true</item>
-        <item>systemui/volume_separate_notification=true</item>
 
         <!-- Wallpaper Effects -->
         <item>device_personalization_services/WallpaperEffects__cinematic_models_mdd_manifest_config=Ct4IEtsICiF3YWxscGFwZXJlZmZlY3RzLWNpbmVtYXRpYy1tb2RlbHMSwgESdWh0dHBzOi8vZGwuZ29vZ2xlLmNvbS9tZGktc2VydmluZy9haWFpLXdhbGxwYXBlcmVmZmVjdHMtY2luZW1hdGljLW1vZGVscy83NDYvNTk2NDgzNDA1MzljOGU2OWRmZGZlYjkzNTk0OTIzYWJmZDBmMGQwNyCM4JQFKig1OTY0ODM0MDUzOWM4ZTY5ZGZkZmViOTM1OTQ5MjNhYmZkMGYwZDA3OhJkZXB0aF9tb2RlbC50ZmxpdGV4AKIBAKoBABLIARJ1aHR0cHM6Ly9kbC5nb29nbGUuY29tL21kaS1zZXJ2aW5nL2FpYWktd2FsbHBhcGVyZWZmZWN0cy1jaW5lbWF0aWMtbW9kZWxzLzc0Ni84NmE3MWYwYTIwYjFhMjhiNTY4MTMwZTliYTZjMTYzZTdhZjQzMTg5IKzsyQQqKDg2YTcxZjBhMjBiMWEyOGI1NjgxMzBlOWJhNmMxNjNlN2FmNDMxODk6GHBlcnNvbl9wb3NlX21vZGVsLnRmbGl0ZXgAogEAqgEAEs0BEnVodHRwczovL2RsLmdvb2dsZS5jb20vbWRpLXNlcnZpbmcvYWlhaS13YWxscGFwZXJlZmZlY3RzLWNpbmVtYXRpYy1tb2RlbHMvNzQ2L2I2NTQxNDFiOTUwNjY3OTVlYjBlNjNlZDRkNzFiZjQxZDQyYjFhNmMgyPPNAiooYjY1NDE0MWI5NTA2Njc5NWViMGU2M2VkNGQ3MWJmNDFkNDJiMWE2YzodcGVyc29uX3NlZ21lbnRlcl9tb2RlbC50ZmxpdGV4AKIBAKoBABLLARJ1aHR0cHM6Ly9kbC5nb29nbGUuY29tL21kaS1zZXJ2aW5nL2FpYWktd2FsbHBhcGVyZWZmZWN0cy1jaW5lbWF0aWMtbW9kZWxzLzc0Ni9lOTllZWJlMDQ2NDk4ZmU2N2MzMzdjZmZkMzkzODM4NTVkMjE0NjM5INCXrwIqKGU5OWVlYmUwNDY0OThmZTY3YzMzN2NmZmQzOTM4Mzg1NWQyMTQ2Mzk6G3JnYmRfaW5wYWludGVyX21vZGVsLnRmbGl0ZXgAogEAqgEAEsQBEnVodHRwczovL2RsLmdvb2dsZS5jb20vbWRpLXNlcnZpbmcvYWlhaS13YWxscGFwZXJlZmZlY3RzLWNpbmVtYXRpYy1tb2RlbHMvNzQ2L2ExNjQ4ZjQ2NDYyZDVmMTExOTVjNmEyYTBhN2M0MTMyZTEwNzJjMDIgsLo6KihhMTY0OGY0NjQ2MmQ1ZjExMTk1YzZhMmEwYTdjNDEzMmUxMDcyYzAyOhVzYWxpZW5jeV9tb2RlbC50ZmxpdGV4AKIBAKoBABgAUABYAGoECAEQAHAAogEAqAEAuAHqBdIBB2RlZmF1bHTaAQDiARsKBwgBEJ+xjRcKBwgCEKCxjRcKBwgDEKGxjRc</item>
