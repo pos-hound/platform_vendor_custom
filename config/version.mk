@@ -19,7 +19,6 @@ ifeq ($(TARGET_INCLUDE_UPDATER),true)
 PRODUCT_PRODUCT_PROPERTIES += \
     net.pixelos.build_type=ci \
     net.pixelos.version=$(CUSTOM_VERSION_PROP)
-endif
 
 # Anim Override
 PRODUCT_PRODUCT_PROPERTIES += \
