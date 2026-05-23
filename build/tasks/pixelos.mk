@@ -14,18 +14,18 @@
 # limitations under the License.
 
 # -----------------------------------------------------------------
-# PixelOS X Hound OTA update package
+# PixelOS OTA update package
 
-CUSTOM_TARGET_PACKAGE := $(PRODUCT_OUT)/HoundPix_$(CUSTOM_VERSION).zip
+CUSTOM_TARGET_PACKAGE := $(PRODUCT_OUT)/PixelOS_$(CUSTOM_VERSION).zip
 
 MD5 := prebuilts/build-tools/path/$(HOST_PREBUILT_TAG)/md5sum
 
 $(CUSTOM_TARGET_PACKAGE): $(INTERNAL_OTA_PACKAGE_TARGET)
 	$(hide) mv -f $(INTERNAL_OTA_PACKAGE_TARGET) $(CUSTOM_TARGET_PACKAGE)
 	$(hide) $(MD5) $(CUSTOM_TARGET_PACKAGE) | sed "s|$(PRODUCT_OUT)/||" > $(CUSTOM_TARGET_PACKAGE).md5sum
-	$(hide) ./vendor/custom/build/tools/createjson.py $(TARGET_DEVICE) $(PRODUCT_OUT) HoundPix_$(CUSTOM_VERSION).zip $(TARGET_BUILD_VARIANT)
+	$(hide) ./vendor/custom/build/tools/createjson.py $(TARGET_DEVICE) $(PRODUCT_OUT) PixelOS_$(CUSTOM_VERSION).zip $(TARGET_BUILD_VARIANT)
 	$(hide) rm -rf $(call intermediates-dir-for,PACKAGING,target_files)
 	@echo "Package Complete: $(CUSTOM_TARGET_PACKAGE)" >&2
 
-.PHONY: piXhound
-piXhound: $(CUSTOM_TARGET_PACKAGE) $(DEFAULT_GOAL)
+.PHONY: pixelos
+pixelos: $(CUSTOM_TARGET_PACKAGE) $(DEFAULT_GOAL)
