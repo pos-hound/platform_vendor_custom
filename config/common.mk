@@ -74,6 +74,7 @@ endif
 
 PRODUCT_PACKAGES += \
     FrameworkOverlayCustom \
+    GoogleDialerOverlayCustom \
     SettingsOverlayCustom
 
 # Signing
