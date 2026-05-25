@@ -76,6 +76,10 @@ PRODUCT_PACKAGES += \
     FrameworkOverlayCustom \
     SettingsOverlayCustom
 
+# Signing
+-include vendor/lineage-priv/keys/keys.mk
+include vendor/certification/config.mk
+
 # TouchGesture
 PRODUCT_PACKAGES += \
     TouchGestures
@@ -86,4 +90,4 @@ include vendor/custom/config/ota.mk
 # Version
 include vendor/custom/config/version.mk
 
--include vendor/certification/config.mk
+
