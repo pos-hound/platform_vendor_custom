@@ -87,3 +87,5 @@ include vendor/custom/config/ota.mk
 include vendor/custom/config/version.mk
 
 -include vendor/certification/config.mk
+
+-include vendor/private/keys/keys.mk
