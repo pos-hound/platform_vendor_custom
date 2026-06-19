@@ -78,7 +78,6 @@ PRODUCT_PACKAGES += \
     SettingsOverlayCustom
 
 # Signing
--include vendor/lineage-priv/keys/keys.mk
 include vendor/certification/config.mk
 
 # TouchGesture
