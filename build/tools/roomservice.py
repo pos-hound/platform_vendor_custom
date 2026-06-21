@@ -45,12 +45,12 @@ except:
     device = product
 
 if not depsonly:
-    print("Device %s not found. Attempting to retrieve device repository from PixelOS-Devices Github (http://github.com/PixelOS-Devices)." % device)
+    print("Device %s not found. Attempting to retrieve device repository from Hound Lab Github (http://github.com/hound-lab)." % device)
 
 repositories = []
 
 if not depsonly:
-    api_url = f"https://api.github.com/search/repositories?q={device}+in:name+org:PixelOS-Devices"
+    api_url = f"https://api.github.com/search/repositories?q={device}+in:name+org:hound-lab"
     github_token = os.getenv('GITHUB_TOKEN')
     if github_token:
         print("Using GitHub token for authenticated requests.")
@@ -186,7 +186,7 @@ def add_to_manifest(repositories):
         repo_remote = repository.get('remote', 'github')
         print('Checking if %s is fetched from %s' % (repo_target, repo_name))
         if is_in_manifest(repo_target):
-            print('PixelOS-Devices/%s already fetched to %s' % (repo_name, repo_target))
+            print('hound-lab/%s already fetched to %s' % (repo_name, repo_target))
             continue
 
         project = ElementTree.Element("project", attrib = {
@@ -218,7 +218,7 @@ def add_to_manifest(repositories):
 
 def fetch_dependencies(repo_path):
     print('Looking for dependencies in %s' % repo_path)
-    dependencies_path = repo_path + '/custom.dependencies'
+    dependencies_path = repo_path + '/hound.dependencies'
     syncable_repos = []
     verify_repos = []
 
@@ -267,7 +267,7 @@ else:
     for repo_name in repositories:
         if re.match(r"^android_device_[^_]*_" + device + "$", repo_name):
             print("Found repository: %s" % repo_name)
-            
+
             manufacturer = repo_name.replace("android_device_", "").replace("_" + device, "")
             repo_path = "device/%s/%s" % (manufacturer, device)
             revision = get_default_revision()
@@ -278,7 +278,7 @@ else:
                 # to check.
                 continue
 
-            device_repository = {'repository':'PixelOS-Devices/' + repo_name,'target_path':repo_path,'branch':revision}
+            device_repository = {'repository':'hound-lab/' + repo_name,'target_path':repo_path,'branch':revision}
             add_to_manifest([device_repository])
 
             print("Syncing repository to retrieve project.")
@@ -289,4 +289,5 @@ else:
             print("Done")
             sys.exit()
 
-print("Repository for %s not found in the PixelOS-Devices Github repository list. If this is in error, you may need to manually add it to your local_manifests/roomservice.xml." % device)
+print("Repository for %s not found in the hound-lab Github repository list. If this is in error, you may need to manually add it to your local_manifests/roomservice.xml." % device)
+
